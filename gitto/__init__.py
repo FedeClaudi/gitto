@@ -10,7 +10,8 @@ orange = '#FFA500'
 @click.command()
 @click.option("-m", "--message", default=None)
 @click.option('-f', '--files', multiple=True, default=None)
-def commit(message=None, files=None):
+@click.option("-p", "--push", is_flag=True, default=False)
+def commit(message=None, files=None, push=False):
     message = message or 'bump'
 
     # Add files
@@ -23,6 +24,9 @@ def commit(message=None, files=None):
 
     print(f'\n[{mocassin}]Executing commit ([{orange}]{message}[/{orange}])')
     os.system(f'git commit -m {message}')
-    os.system(f'git push')
+
+    if push:
+        print(f'\n[{mocassin}]Pushing commit ([{orange}]{message}[/{orange}])')
+        os.system(f'git push')
 
     print(f'[bold green]Commit [/bold green][{orange}]{message}[/{orange}][bold green] has been commited')
