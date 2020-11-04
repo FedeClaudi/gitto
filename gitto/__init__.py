@@ -4,7 +4,7 @@ import click
 
 mocassin = '#FFE4B5'
 orange = '#FFA500'
-
+green = '#4ca975'
 
 
 @click.command()
@@ -29,4 +29,4 @@ def commit(message=None, files=None, push=False):
         print(f'\n[{mocassin}]Pushing commit ([{orange}]{message}[/{orange}])')
         os.system(f'git push')
 
-    print(f'[green]Commit [/green][{orange}]{message}[/{orange}][green] has been [{orange}]{"commited" if not push else "pushed"}')
+    print(f'\n[{green}]Commit [/{green}][{orange}]{message}[/{orange}][{green}] has been [{orange}]{"commited" if not push else "pushed"}')
