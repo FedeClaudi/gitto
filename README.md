@@ -27,6 +27,6 @@ If `-p` is omitted, the commit will be staged but not pushed to the upstream bra
 
 
 The results might look something like:
-![](img.PNG){ width:300px }
+![](img.PNG){ width=600px }
 
 That's it!
