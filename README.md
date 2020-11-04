@@ -24,4 +24,9 @@ If `-m` is omitted the commit will be called "bump", if `-f` is omitted **all** 
 
 If `-p` is omitted, the commit will be staged but not pushed to the upstream branch.
 
+
+
+The results might look something like:
+![](img.PNG){ width:300px }
+
 That's it!
