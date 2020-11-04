@@ -21,6 +21,8 @@ def commit(message=None, files=None):
     except IndexError:
         os.system(f'git add .')
 
-    print(f'\n\n[{mocassin}]Executing commit ([{orange}]{message}[/{orange}])')
+    print(f'\n[{mocassin}]Executing commit ([{orange}]{message}[/{orange}])')
     os.system(f'git commit -m {message}')
     os.system(f'git push')
+
+    print(f'[bold green]Commit [/bold green][{orange}]{message}[/{orange}][bold green] has been commited')
