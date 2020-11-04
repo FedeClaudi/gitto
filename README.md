@@ -1,0 +1,2 @@
+# gitto
+automate git commits
