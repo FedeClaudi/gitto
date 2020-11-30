@@ -12,7 +12,7 @@ requirements = [
 
 setup(
     name="gitto",
-    version="0.0.2",
+    version="0.0.3rc",
     description="Automate commits to github",
     long_description=long_description,
     long_description_content_type="text/markdown",
