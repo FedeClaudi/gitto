@@ -13,6 +13,7 @@ green = '#4ca975'
 @click.option("-p", "--push", is_flag=True, default=False)
 def commit(message=None, files=None, push=False):
     message = message or 'bump'
+    print(message)
 
     # Add files
     print(f'[{mocassin}]Adding files to commit ([{orange}]{message}[/{orange}])')
@@ -23,7 +24,7 @@ def commit(message=None, files=None, push=False):
         os.system(f'git add .')
 
     print(f'\n[{mocassin}]Executing commit ([{orange}]{message}[/{orange}])')
-    os.system(f'git commit -m {message}')
+    os.system(f'git commit -m "{message}"')
 
     if push:
         print(f'\n[{mocassin}]Pushing commit ([{orange}]{message}[/{orange}])')
